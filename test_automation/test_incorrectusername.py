@@ -30,16 +30,17 @@ def browser():
 
 @pytest.fixture(scope="module")
 def student(browser):
-    # Open the web application in a browser
+   # Gets the URL and opens the website in browser
     browser.get(os.getenv('URL'))
-    return browser  # Return the browser instance after opening the web application
+    return browser  
 
-
+# Test cases for unsuccessful login by passing incorrect username
 def test_incorrect_username(student):
     username_input = student.find_element(By.XPATH, "//*[@id='username']")
     password_input = student.find_element(By.ID, "password")
     submit_button = student.find_element(By.ID, "submit")
     username_input.clear()
+    # Fetching the username from env and concatenating incorrect username
     username_input.send_keys(os.getenv('USER_NAME') + "incorrectUser")
     password_input.send_keys(os.getenv('USER_PASSWORD'))
     submit_button.click()
