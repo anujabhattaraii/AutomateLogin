@@ -4,7 +4,7 @@ This section provides information for developers who wish to understand and cont
 
 ### Introduction
 
-The provided code is a Python script designed to automate testing using Selenium and Pytest. It includes fixtures and test cases for logging into a web application and verifying successful login.
+The provided code is a Python script designed to automate testing using Selenium and Pytest. It includes fixtures and test cases for logging into a web application, verifying successful and unsuccessful login.
 
 ### Requirements
 
