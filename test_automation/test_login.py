@@ -46,5 +46,5 @@ def login(browser):
 
 def test_login_successful(login):
     # Verify that the user is successfully logged in by checking for a specific element or page title
-    welcome_message = login.find_element(By.XPATH,"//div[@class='post-header']/h1[@class='post-title']")
-    assert "Logged In Successfully" in welcome_message.text
+    success_message = login.find_element(By.XPATH,"//div[@class='post-header']/h1[@class='post-title']")
+    assert "Logged In Successfully" in success_message.text
